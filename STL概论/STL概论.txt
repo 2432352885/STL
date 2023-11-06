@@ -16,3 +16,17 @@ STL的六大组件
     5、配接器(adapters) 一种用来修饰容器或者仿函数后迭代器接口的东西 不同的修饰 在不同修饰之后加 ~ adapter
     6、配置器(allocators) 负责空间配置和管理 实现动态空间配置、空间管理、空间释放的class tmplate 
 
+六大组件之间的交互关系
+    Container 通过 Allocator 取得数据储存空间，Algorithm通过Iterator存取Contain内容
+    Functor可以协助Algorithm完成不同策略变化 Adapter可以修饰或者套接Functor
+    可见图
+
+partial specialization of class templates类模板的部分特殊化/专用化 
+
+explict阐述 用于构造函数之后 不能隐式调用构造函数
+
+__STL_WIN32THREADS win32的编译器编译 并在多线程模式下使用
+
+exception 相关的marocs __STL__TRY __STL__UNWIND
+
+ 
